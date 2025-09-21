@@ -1,4 +1,5 @@
 Sakha.ai - Your Compassionate Mental Health Companion
+
 A web-based mental wellness companion that uniquely fuses the empathetic capabilities of modern AI with the timeless, profound wisdom of Indian philosophy and leadership. Sakha.ai is designed to be a safe, culturally resonant space for users to explore their feelings and find guidance for modern life's challenges.
 ✨ Core Features
 💬 Multi-Mode AI Chat: Switch between Normal Mode (for empathetic, AI-driven conversations), Gita Mode (for wisdom from the Bhagavad Gita), and Leadership Mode (for motivation from great Indian leaders).
