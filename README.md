@@ -34,7 +34,7 @@ Python 3.9 or higher
 A Google Gemini API Key
 Installation
 Clone the repository:
-git clone [https://github.com/your-username/sakha-ai.git](https://github.com/your-username/sakha-ai.git)
+git clone (https://github.com/Dev0923/Sakha.ai)
 cd sakha-ai
 
 
