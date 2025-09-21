@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakha.ai - Your Mental Health Companion</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="/static/i18n.js"></script>
+    <link rel="icon" href="/static/icon.png" type="image/png">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="static/icon.png" alt="Sakha.ai" class="logo-icon">
+                    <span>Sakha.ai</span>
+                </div>
+                <div class="tagline" data-i18n="app.tagline">Your Compassionate Mental Health Companion</div>
+                <div class="header-controls">
+                    <button id="crisis-button" class="crisis-button" title="Crisis Support">
+                        <i class="fas fa-phone"></i>
+                        <span data-i18n="app.crisis.emergency">Crisis Help</span>
+                    </button>
+                    <div class="language-selector-container">
+                        <select id="language-selector" class="language-selector">
+                            <option value="en">🇺🇸 English</option>
+                            <option value="hi">🇮🇳 हिन्दी</option>
+                            <option value="ta">🇮🇳 தமிழ்</option>
+                            <option value="te">🇮🇳 తెలుగు</option>
+                            <option value="pa">🇮🇳 ਪੰਜਾਬੀ</option>
+                            <option value="fr">🇫🇷 Français</option>
+                            <option value="es">🇪🇸 Español</option>
+                        </select>
+                    </div>
+                    <div class="status-indicator">
+                        <span id="status-dot" class="status-dot"></span>
+                        <span id="status-text" data-i18n="app.status.connecting">Connecting...</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Chat Container -->
+        <main class="main-container">
+            <!-- Welcome Message -->
+            <div id="welcome-message" class="welcome-message">
+                <div class="welcome-content">
+                    <h1 data-i18n="app.welcome.title">🧘‍♀️ Welcome to Sakha.ai</h1>
+                    <p data-i18n="app.welcome.subtitle">A holistic mental health support system combining ancient Indian wisdom with modern psychology</p>
+                    
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <i class="fas fa-comments"></i>
+                            <h3 data-i18n="app.features.aiConversations.title">Empathetic AI Conversations</h3>
+                            <p data-i18n="app.features.aiConversations.description">Powered by Google Gemini for personalized support</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <i class="fas fa-book"></i>
+                            <h3 data-i18n="app.features.gitaWisdom.title">Bhagavad Gita Wisdom</h3>
+                            <p data-i18n="app.features.gitaWisdom.description">Ancient teachings applied to modern challenges</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <i class="fas fa-star"></i>
+                            <h3 data-i18n="app.features.inspirationalStories.title">Inspirational Stories</h3>
+                            <p data-i18n="app.features.inspirationalStories.description">Motivation from APJ Abdul Kalam, Vivekananda & more</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <i class="fas fa-hands-helping"></i>
+                            <h3 data-i18n="app.features.crisisSupport.title">Crisis Support</h3>
+                            <p data-i18n="app.features.crisisSupport.description">Immediate help and professional resources</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <i class="fas fa-scroll"></i>
+                            <h3 data-i18n="app.features.epicStories.title">Epic Stories</h3>
+                            <p data-i18n="app.features.epicStories.description">Lessons from Mahabharata, Ramayana & Upanishads</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <i class="fas fa-balance-scale"></i>
+                            <h3 data-i18n="app.features.chatModes.title">Three Chat Modes</h3>
+                            <p data-i18n="app.features.chatModes.description">Normal, Gita Mode, and Inspire Mode</p>
+                        </div>
+                    </div>
+                    
+                    <p class="start-prompt" data-i18n="app.welcome.startPrompt">Share what's on your mind to begin your wellness journey...</p>
+                </div>
+            </div>
+
+            <!-- Chat Messages Container -->
+            <div id="chat-container" class="chat-container" style="display: none;">
+                <div id="messages" class="messages"></div>
+            </div>
+        </main>
+
+        <!-- Chat Input -->
+        <div class="chat-input-container">
+            <!-- Mode Selector -->
+            <div class="mode-selector">
+                <div class="mode-label" data-i18n="app.modes.chatMode">Chat Mode:</div>
+                <div class="mode-buttons">
+                    <button class="mode-btn active" data-mode="normal">
+                        <i class="fas fa-balance-scale"></i>
+                        <span data-i18n="app.modes.normal">Normal</span>
+                    </button>
+                    <button class="mode-btn" data-mode="gita">
+                        <i class="fas fa-book-open"></i>
+                        <span data-i18n="app.modes.gita">Gita Mode</span>
+                    </button>
+                    <button class="mode-btn" data-mode="inspire">
+                        <i class="fas fa-star"></i>
+                        <span data-i18n="app.modes.inspire">Inspire</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="input-wrapper">
+                <textarea 
+                    id="message-input" 
+                    data-i18n-placeholder="app.placeholders.normal"
+                    placeholder="Share what's on your mind... I'm here to listen and support you."
+                    rows="1"
+                ></textarea>
+                <button id="send-button" class="send-button" disabled>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            <div class="input-footer">
+                <span class="disclaimer" data-i18n="app.disclaimer">Sakha.ai provides supportive guidance but is not a replacement for professional mental health care.</span>
+            </div>
+        </div>
+
+        <!-- Crisis Modal -->
+        <div id="crisis-modal" class="crisis-modal">
+            <div class="modal-content">
+                <div class="crisis-header">
+                    <h2 data-i18n="app.crisis.title">🚨 Immediate Support Available</h2>
+                </div>
+                <div class="crisis-body">
+                    <p data-i18n="app.crisis.description">If you're in immediate danger or having thoughts of self-harm, please reach out for help right now:</p>
+                    
+                    <div class="crisis-contacts">
+                        <div class="contact-section">
+                            <h3 data-i18n="app.crisis.emergencyIndia">Emergency (India)</h3>
+                            <div class="contact-item">
+                                <strong data-i18n="app.crisis.aasra">AASRA:</strong> <a href="tel:+912227546669">+91-22-27546669</a>
+                                <span>(24/7 suicide prevention)</span>
+                            </div>
+                            <div class="contact-item">
+                                <strong data-i18n="app.crisis.sneha">Sneha:</strong> <a href="tel:+914424640050">+91-44-24640050</a>
+                                <span>(24/7 emotional support)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-section">
+                            <h3 data-i18n="app.crisis.international">International</h3>
+                            <div class="contact-item">
+                                <strong data-i18n="app.crisis.crisisTextLine">Crisis Text Line:</strong> Text HOME to 741741
+                            </div>
+                            <div class="contact-item">
+                                <strong data-i18n="app.crisis.emergency">Emergency:</strong> 112 (India) or 911 (US)
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p><strong data-i18n="app.crisis.supportMessage">You are not alone. Your life has value. Help is available.</strong></p>
+                </div>
+                <button id="close-crisis-modal" class="close-button" data-i18n="app.crisis.continueButton">Continue with Sakha.ai</button>
+            </div>
+        </div>
+
+        <!-- Loading Overlay -->
+        <div id="loading-overlay" class="loading-overlay">
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+                <p data-i18n="app.loading">Sakha.ai is thinking...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

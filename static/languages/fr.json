@@ -1,0 +1,69 @@
+{
+  "app": {
+    "title": "Sakha.ai - Votre Compagnon de Santé Mentale",
+    "tagline": "Votre Compagnon Bienveillant en Santé Mentale",
+    "welcome": {
+      "title": "🧘‍♀️ Bienvenue sur Sakha.ai",
+      "subtitle": "Un système de soutien en santé mentale holistique combinant la sagesse indienne ancienne avec la psychologie moderne",
+      "startPrompt": "Partagez ce qui vous préoccupe pour commencer votre parcours de bien-être..."
+    },
+    "features": {
+      "aiConversations": {
+        "title": "Conversations IA Empathiques",
+        "description": "Alimenté par Google Gemini pour un soutien personnalisé"
+      },
+      "gitaWisdom": {
+        "title": "Sagesse de la Bhagavad Gita",
+        "description": "Enseignements anciens appliqués aux défis modernes"
+      },
+      "inspirationalStories": {
+        "title": "Histoires Inspirantes",
+        "description": "Motivation d'APJ Abdul Kalam, Vivekananda et plus"
+      },
+      "crisisSupport": {
+        "title": "Soutien en Crise",
+        "description": "Aide immédiate et ressources professionnelles"
+      },
+      "epicStories": {
+        "title": "Histoires Épiques",
+        "description": "Leçons du Mahabharata, Ramayana et Upanishads"
+      },
+      "chatModes": {
+        "title": "Trois Modes de Chat",
+        "description": "Normal, Mode Gita et Mode Inspiration"
+      }
+    },
+    "modes": {
+      "chatMode": "Mode de Chat:",
+      "normal": "Normal",
+      "gita": "Mode Gita",
+      "inspire": "Inspiration"
+    },
+    "placeholders": {
+      "normal": "Partagez ce qui vous préoccupe... Je suis là pour vous écouter et vous soutenir.",
+      "gita": "Demandez la sagesse de la Bhagavad Gita pour guider votre chemin...",
+      "inspire": "Cherchez l'inspiration des grands leaders pour surmonter les défis..."
+    },
+    "status": {
+      "connecting": "Connexion...",
+      "aiReady": "IA Prête",
+      "connectedLimited": "Connecté (IA Limitée)",
+      "disconnected": "Déconnecté"
+    },
+    "crisis": {
+      "title": "🚨 Support Immédiat Disponible",
+      "description": "Si vous êtes en danger immédiat ou avez des pensées d'automutilation, veuillez demander de l'aide maintenant :",
+      "emergencyIndia": "Urgence (Inde)",
+      "international": "International",
+      "aasra": "AASRA",
+      "sneha": "Sneha",
+      "crisisTextLine": "Ligne de Texte de Crise",
+      "emergency": "Aide de Crise",
+      "continueButton": "Continuer avec Sakha.ai",
+      "supportMessage": "Vous n'êtes pas seul. Votre vie a de la valeur. L'aide est disponible."
+    },
+    "loading": "Sakha.ai réfléchit...",
+    "disclaimer": "Sakha.ai fournit des conseils de soutien mais ne remplace pas les soins professionnels de santé mentale.",
+    "error": "Je m'excuse, mais j'ai des difficultés à me connecter en ce moment. Veuillez réessayer dans un moment. Si le problème persiste, veuillez actualiser la page."
+  }
+}

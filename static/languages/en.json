@@ -1,0 +1,69 @@
+{
+  "app": {
+    "title": "Sakha.ai - Your Mental Health Companion",
+    "tagline": "Your Compassionate Mental Health Companion",
+    "welcome": {
+      "title": "🧘‍♀️ Welcome to Sakha.ai",
+      "subtitle": "A holistic mental health support system combining ancient Indian wisdom with modern psychology",
+      "startPrompt": "Share what's on your mind to begin your wellness journey..."
+    },
+    "features": {
+      "aiConversations": {
+        "title": "Empathetic AI Conversations",
+        "description": "Powered by Google Gemini for personalized support"
+      },
+      "gitaWisdom": {
+        "title": "Bhagavad Gita Wisdom",
+        "description": "Ancient teachings applied to modern challenges"
+      },
+      "inspirationalStories": {
+        "title": "Inspirational Stories",
+        "description": "Motivation from APJ Abdul Kalam, Vivekananda & more"
+      },
+      "crisisSupport": {
+        "title": "Crisis Support",
+        "description": "Immediate help and professional resources"
+      },
+      "epicStories": {
+        "title": "Epic Stories",
+        "description": "Lessons from Mahabharata, Ramayana & Upanishads"
+      },
+      "chatModes": {
+        "title": "Three Chat Modes",
+        "description": "Normal, Gita Mode, and Inspire Mode"
+      }
+    },
+    "modes": {
+      "chatMode": "Chat Mode:",
+      "normal": "Normal",
+      "gita": "Gita Mode",
+      "inspire": "Inspire"
+    },
+    "placeholders": {
+      "normal": "Share what's on your mind... I'm here to listen and support you.",
+      "gita": "Ask for wisdom from the Bhagavad Gita to guide your path...",
+      "inspire": "Seek inspiration from great leaders to overcome challenges..."
+    },
+    "status": {
+      "connecting": "Connecting...",
+      "aiReady": "AI Ready",
+      "connectedLimited": "Connected (Limited AI)",
+      "disconnected": "Disconnected"
+    },
+    "crisis": {
+      "title": "🚨 Immediate Support Available",
+      "description": "If you're in immediate danger or having thoughts of self-harm, please reach out for help right now:",
+      "emergencyIndia": "Emergency (India)",
+      "international": "International",
+      "aasra": "AASRA",
+      "sneha": "Sneha",
+      "crisisTextLine": "Crisis Text Line",
+      "emergency": "Crisis Help",
+      "continueButton": "Continue with Sakha.ai",
+      "supportMessage": "You are not alone. Your life has value. Help is available."
+    },
+    "loading": "Sakha.ai is thinking...",
+    "disclaimer": "Sakha.ai provides supportive guidance but is not a replacement for professional mental health care.",
+    "error": "I apologize, but I'm having trouble connecting right now. Please try again in a moment. If the problem persists, please refresh the page."
+  }
+}
